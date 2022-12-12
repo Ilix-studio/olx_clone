@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #FFDCA8;
+}
+
+.header{
+    position: sticky;
+    top: 0%;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    width: 1300px;
+    margin: auto;
+}
+.logoBox{
+    position: absolute;
+width: 160px;
+height: 79px;
+left: 60px;
+top: 0px;
+background: #000000;
+color: #FFFFFF;
+}
+
+
+
+.search_box{
+    display: flex;
+    margin-left: 30px;
+}
+.searchclass{
+    padding: 10px;
+    width: 400px;
+    font-size: 15px;
+    border: 2px solid black;
+    border-radius: 6px 0 0 6px;
+}
