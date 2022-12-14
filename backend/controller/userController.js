@@ -53,13 +53,13 @@ const loginUser = asyncHandler(async (req, res) => {
       token: generateToken(user._id),
     });
   } else {
-    res.status(400);
+    res.status(400); 
     throw new Error("Invalid Credentials");
   }
 });
 
-//desc - login User
-//route - GET /api/user
+//desc - get user data
+//route - GET /api/users/user
 //privaqte
 const getUser = asyncHandler(async (req, res) => {
   const { _id, name, email } = await User.findById(req.user.id);
