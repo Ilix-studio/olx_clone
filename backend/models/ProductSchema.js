@@ -16,6 +16,7 @@ const productSchema = mongoose.Schema(
     required: [true, "Please add price"],
   },
   image: {
+    data: Buffer,
     type: String,
     required: [true, "Please add image here"],
   },
