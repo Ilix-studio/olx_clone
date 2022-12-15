@@ -19,6 +19,7 @@ const Header = () => {
           </form>
           <div className="icons">
             <div id="search-btn" className="fas fa-search" />
+            <Link to="/upload" >Upload</Link>
             <Link to="/login" >Login</Link>
            
           </div>

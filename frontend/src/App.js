@@ -6,6 +6,9 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 
 import "./styles/Home.global.css";
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+import ProductForm from "./Component/ProductForm";
 
 const App = () => {
   return (
@@ -16,6 +19,7 @@ const App = () => {
           <Route path="/" element={<Dashboard />}></Route>
           <Route path="/login" element={<Login />}></Route>
           <Route path="/register" element={<Register />}></Route>
+          <Route path="/upload" element={<ProductForm />}></Route>
         </Routes>
       </Router>
 
@@ -25,6 +29,7 @@ const App = () => {
           Made with 💖 by <span>ILISH</span> | all rights reserved!{" "}
         </div>
       </section>
+      <ToastContainer />
     </>
   );
 };
