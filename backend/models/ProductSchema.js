@@ -17,7 +17,7 @@ const productSchema = mongoose.Schema(
   },
   image: {
     data: Buffer,
-    type: String,
+    contentType: String,
     required: [true, "Please add image here"],
   },
   phno: {
