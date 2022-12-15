@@ -20,7 +20,7 @@ const Register = () => {
           <span>username</span>
           <input
             type="email"
-            name=""
+            name=" "
             className="box"
             placeholder="enter your email"
             id=""
