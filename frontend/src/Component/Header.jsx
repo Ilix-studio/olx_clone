@@ -1,6 +1,17 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from 'react-redux'
+import { logout, reset } from '../features/auth/authSlice'
 
 const Header = () => {
+  const navigate = useNavigate()
+  const dispatch = useDispatch()
+  const { user } = useSelector((state) => state.auth)
+
+  const onLogout = () => {
+    dispatch(logout())
+    dispatch(reset())
+    navigate('/')
+  }
   return (
     <>
      <header className="header">
@@ -20,7 +31,13 @@ const Header = () => {
           <div className="icons">
             <div id="search-btn" className="fas fa-search" />
             <Link to="/upload" >Upload</Link>
-            <Link to="/login" >Login</Link>
+            {
+              user? (<Link to="/" className="logout" onClick={onLogout}>Logout</Link>) : (<Link to="/login" >Login</Link>)
+            }
+
+
+
+           
            
           </div>
         </div>
