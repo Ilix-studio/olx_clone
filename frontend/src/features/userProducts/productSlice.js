@@ -10,7 +10,7 @@ const initialState = {
 };
 
 export const createProduct = createAsyncThunk(
-  "products/create",
+  "product/create",
   async (productData, thunkAPI) => {
     try {
       const token = thunkAPI.getState().auth.user.token;
@@ -46,7 +46,7 @@ export const getProducts = createAsyncThunk(
 );
 
 export const deleteProduct = createAsyncThunk(
-  "goals/delete",
+  "products/delete",
   async (id, thunkAPI) => {
     try {
       const token = thunkAPI.getState().auth.user.token;

@@ -78,7 +78,7 @@ const Login = () => {
             id=""
           />
 
-          <button type="submit" defaultValue="sign in" className="btn">
+          <button type="submit" className="btn">
             Submit
           </button>
 

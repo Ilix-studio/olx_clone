@@ -22,6 +22,7 @@ const upload = multer({
   storage: Storage,
 }).single("testImage");
 
+
 //desc -  create User Product
 //route - POST /api/user
 //Private
@@ -36,7 +37,7 @@ const createProduct = asyncHandler(async (req, res) => {
     user,
     productName,
     price,
-    image:upload,
+    image: upload(),
     phno,
   });
   if (userProduct) {
@@ -44,7 +45,10 @@ const createProduct = asyncHandler(async (req, res) => {
       user: req.body.id,
       productName: userProduct.productName,
       price: userProduct.price,
-      image: userProduct.image,
+      image: {
+        data:req.file.filename,
+        contentType: [ 'image/png', 'image/jpg', 'image/jpeg'],
+      },
       phno: userProduct.phno,
     });
   } else {

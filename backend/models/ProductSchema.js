@@ -18,7 +18,7 @@ const productSchema = mongoose.Schema(
   image: {
     data: Buffer,
     contentType: String,
-   
+    
   },
   phno: {
     type: Number,

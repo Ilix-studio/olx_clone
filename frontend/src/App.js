@@ -25,7 +25,7 @@ const App = () => {
 
       <section class="footer">
         <div class="credit">
-          {" "}
+         
           Made with 💖 by <span>ILISH</span> 
         </div>
       </section>
