@@ -37,7 +37,10 @@ const createProduct = asyncHandler(async (req, res) => {
     user,
     productName,
     price,
-    image: upload(),
+    image: {
+      data:req.file.filename,
+      contentType: [ 'image/png', 'image/jpg', 'image/jpeg'],
+    },
     phno,
   });
   if (userProduct) {
@@ -45,10 +48,7 @@ const createProduct = asyncHandler(async (req, res) => {
       user: req.body.id,
       productName: userProduct.productName,
       price: userProduct.price,
-      image: {
-        data:req.file.filename,
-        contentType: [ 'image/png', 'image/jpg', 'image/jpeg'],
-      },
+      image: upload(),
       phno: userProduct.phno,
     });
   } else {
